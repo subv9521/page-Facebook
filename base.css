@@ -19,6 +19,8 @@ a:hover {
     text-decoration: none;
 }
 
+
+
 .cover-image__btn-edit:hover,
 .edit-information__add-new:hover,
 .edit-information__plus-wrap:hover,
@@ -26,7 +28,7 @@ a:hover {
 .head__add-img-video:hover,
 .head__head-setting:hover,
 .navbar-activate-icon:hover,
-.head__des-item,
+.head__des-item:hover,
 .img__and-edit-icon:hover {
     cursor: pointer;
 }
@@ -139,5 +141,9 @@ a:hover {
 
 .active:hover {
     background-color: unset;
-    border-radius: unset;
+    border-radius: unset !important;
+}
+
+.navbar-activate-icon.active:hover {
+    background-color: unset;
 }

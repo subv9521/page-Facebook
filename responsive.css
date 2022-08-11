@@ -34,15 +34,19 @@
         margin: auto;
     }
 
-    .avatar-and-infomation-and-edit {
-        position: relative;
-        top: -80px;
-    }
-
     .avatar-and-infomation-and-edit .container-fix {
         max-width: calc(370px + 30px);
         flex-direction: column;
         align-items: center;
+    }
+
+    .infomation,
+    .edit-information {
+        transform: translateY(10px);
+    }
+
+    .information-personal-wrap {
+        padding: 10px 15px;
     }
 
     .friend-search-container {
@@ -59,25 +63,38 @@
     }
 
     .infomation__des-friend-wrap {
-        margin-top: 10px;
-        transform: translateX(10px);
+        transform: translateX(20px);
+        justify-content: center;
+    }
+
+    .edit-information {
+        display: block;
+        width: 100%;
     }
 
     .edit-information__add-new {
-        padding: 0px 8px ;
+        width: inherit;
+        justify-content: center;
     }
 
     .edit-information__plus-wrap {
         margin-left: unset;
     }
 
+    .edit-information__btn {
+        margin-top: 10px;
+        width: inherit;
+        justify-content: center;
+    }
+
     .edit-information__btn-pen {
-        padding-right: 5px;
+        padding-right: 10px;
         font-size: 14px;
     }
 
     .navbar-activate .container-fix {
-        max-width: calc(370px + 30px);
+        max-width: 370px;
+        padding: 0;
     }
 
     .set-item .container-fix {
@@ -87,6 +104,18 @@
     .introduce-list-des {
         border-right: unset;
         border-bottom: 1px solid #b0b3b844;
+    }
+
+    .posts-other {
+        margin-top: 20px;
+    }
+
+    .post-btn-live {
+        margin: 0 auto;
+    }
+
+    .friend-search {
+        width: 50%;
     }
 }
 /* ----------------------------------------------------------------------------------------576px */
@@ -125,24 +154,29 @@
         max-width: calc(570px + 30px);
     }
 
-    .avatar-and-infomation-and-edit {
-        position: relative;
-        top: -80px;
-    }
-
     .avatar-and-infomation-and-edit .container-fix {
         max-width: calc(370px + 30px);
         flex-direction: column;
         align-items: center;
     }
 
-    .infomation__list-friend {
-        text-align: center;
+    .infomation__des-friend-wrap {
+        transform: translateX(20px);
+        justify-content: center;
     }
 
-    .infomation__des-friend-wrap {
-        margin-top: 10px;
-        transform: translateX(10px);
+    .infomation,
+    .edit-information {
+        transform: translateY(10px);
+    }
+
+    .information-personal-img {
+        height: 150px;
+    }
+    
+
+    .infomation__list-friend {
+        text-align: center;
     }
 
     .edit-information__add-new {
@@ -151,6 +185,10 @@
 
     .edit-information__plus-wrap {
         margin-left: unset;
+    }
+
+    .infomation__des-friend-wrap {
+        transform: translateX(20px);
     }
 
     .edit-information__btn-pen {
@@ -169,6 +207,10 @@
     .introduce-list-des {
         border-right: unset;
         border-bottom: 1px solid #b0b3b844;
+    }
+
+    .information-personal-wrap {
+        padding: 10px 15px;
     }
 }
 /* ----------------------------------------------------------------------------------------768px */
@@ -215,6 +257,10 @@
     .img__and-edit {
         height: 180px;
     }
+
+    .information-personal-img {
+        height: 180px;
+    }
 }
 /* ----------------------------------------------------------------------------------------992px */
 @media (min-width: 992px) {
@@ -253,19 +299,31 @@
         align-items: flex-end;
     }
 
-    .avatar-and-infomation-and-edit {
-        position: relative;
-        top: -30px;
+    .infomation__des-friend-wrap {
+        transform: unset;
+        justify-content: start;
     }
 
+    .infomation,
+    .edit-information {
+        transform: unset;
+    }
+
+
     .infomation {
-        margin-right: 145px;
-        align-items: start;
-        padding-bottom: 12px;
+    }
+
+    .information-personal-img {
+        height: 110px;
+    }
+    
+
+    .infomation__list-friend {
+        text-align: left;
     }
 
     .infomation__des-friend-wrap {
-        transform: translateX(-25px);
+        transform: unset;
     }
 
     .navbar-activate .container-fix {

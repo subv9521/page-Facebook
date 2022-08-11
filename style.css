@@ -88,6 +88,7 @@
 /* COVER IMG ---------------------------------------------------------------------------------------- */
 .cover-image {
     margin-top: 55px;
+    position: relative;
 }
 
 .cover-image-warp {
@@ -123,6 +124,11 @@
 }
 
 /* ẢNH ĐẠI DIỆN ---------------------------------------------------------------------------------------- */
+
+.avatar-and-infomation-and-edit {
+    transform: translateY(-30px);
+}
+
 .avatar {
     position: relative;
 
@@ -152,29 +158,33 @@
 }
 
 .infomation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 1;
+    height: 100%;
+    margin-left: 10px;
 }
 
 .infomation__name {
     color: #e4e6eb;
-    font-size: 33px;
+    font-size: 31px;
     font-weight: 650;
-    text-align: center;
+    text-align: left;
+    line-height: 28px;
+    flex: 1;
 }
 
 .infomation__list-friend {
     color: var(--primary-color);
     font-size: 16px;
     font-weight: 500;
+    display: block;
 }
 
 
 .infomation__des-friend-wrap {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    margin: 5px 0 10px 0;
 }
 
 .thumbnail-friend {
@@ -182,44 +192,39 @@
     height: 35px;
     border-radius: 50%;
     border: 2px solid var(--bacground-color);
-    position: relative;
+    overflow: hidden;
+    display: flex;
 }
 
-
 .friend1 {
-    left: 25px;
     z-index: 4;
 }
 
 .friend2 {
-    left: 10px;
+    transform: translateX(-10px);
     z-index: 3;
 }
 
 .friend3 {
+    transform: translateX(-20px);
     z-index: 2;
 }
 
 .friend4 {
-    right: 10px;
+    transform: translateX(-30px);
 }
 
 .infomation__des-friend-add {
     color: var(--primary-color);
     font-size: 18px;
-    width: 35px;
-    height: 35px;
-    text-align: center;
     line-height: 35px;
-    border-radius: 50%;
-    border: 2px solid rgba(0, 0, 0, 0);
-    position: relative;
-    right: 43px;
+    transform: translateX(-53px);
+    
 }
 
 .edit-information {
     height: 100%;
-    padding: 20px 0 12px;
+    padding: 20px 0 10px;
 }
 
 .edit-information__add-new {
@@ -267,7 +272,8 @@
 }
 
 .edit-information__btn:hover {
-    background-color: var(--bacground-color-btn);
+    background-color: #535353be;
+    cursor: pointer;
 }
 
 /* NAV BAR CHÍNH ---------------------------------------------------------------------------------------- */
@@ -343,7 +349,6 @@
 
 .information-personal-wrap {
     background-color: var(--bacground-color);
-    padding: 0 15px 7px;
     border-radius: 10px;
 }
 
@@ -418,11 +423,10 @@
 }
 
 .information-personal-img img {
-    max-width: 250%;
-    max-height: 250%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: contain;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
 }
 
 .information-personal-imgs .row-fix {
@@ -457,7 +461,7 @@
 }
 
 .posts-type-set {
-    padding: 10px  15px 10px;
+    padding: 10px 0 10px;
 }
 
 .posts-type-set img {
@@ -466,6 +470,7 @@
 
 .posts-type-set-search.friend-search-container {
     flex: 1;
+    max-width: 100%;
     padding-left: 15px;
     font-size: 18px;
     height: 40px;
@@ -473,7 +478,7 @@
 }
 
 .posts-type-list {
-    padding: 15px 15px 0;
+    padding: 15px 0px 0;
     margin: 10px 0 0;
     border-top: 1px solid #b0b3b844;
 }
@@ -600,16 +605,19 @@
 
 .post {
     margin-top: 20px;
-    padding: 10px 15px 10px;
+    padding: 10px 0 10px;
 }
 
 .header__avatar-desc-wrap .header__avatar {
     margin-left: 0;
 }
 
-.post-img {
-
+.post-text {
+    color: var(--text-color-lighter);
+    margin: 5px 0 0;
+    font-size: 14px;
 }
+
 
 .post-img-link {
     width: 100%;
@@ -629,19 +637,48 @@
 
 }
 
+.action-comment-friend {
+    color: var(--primary-color);   
+    margin-top: 10px;
+}
+
+.action-friend {
+}
+
+.action-friend-icon {
+    background-color:  #0152ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.action-friend-icon i {
+    font-size: 12px;
+    margin: auto;
+    color: var(--text-color);
+}
+
+.comment-friend {
+
+}
+
+
 .post-action {
     border: none;
-    margin-top: 0;
-    padding: 10px 10px 0;
-    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+    border-top: 1px solid #b0b3b844;
+    border-bottom: 1px solid #b0b3b844;
+
 }
 
 .post-action .posts-type-item {
-    min-width: 150px;
     display: flex;
     justify-content: center;
-    padding: 8px 0;
+    padding: 8px 0px;
     margin-bottom: 5px;
+    flex: 1;
 }
 
 
@@ -656,7 +693,6 @@
 
 .post-img-comment {
     padding-top: 10px;
-    border-top: 1px solid #b0b3b844;
 }
 
 .post-comment i {
@@ -813,10 +849,14 @@
     height: 85px;
     border-radius: 5px;
     overflow: hidden;
+    display: flex;
 }
 
 .friend-img-link {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    margin: auto;
 }
 
 .friend-name {
@@ -856,7 +896,9 @@
 }
 
 .img__link {
-    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: contain;
 }
 
 .img__and-edit-icon {
@@ -885,6 +927,18 @@
     background-color: var(--bacground-color);
     border-radius: 10px;
 
+}
+
+.loading-page {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--bacground-color);
+    color: var(--text-color-lighter);
 }
 
 

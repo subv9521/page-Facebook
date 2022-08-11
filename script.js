@@ -92,7 +92,7 @@ getPostManageItem.forEach((item) => {
 
 
 
-
+/*
 
 const baseURL = 'https://62ebc1e5705264f263dfa66f.mockapi.io/v1';
 

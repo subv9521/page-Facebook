@@ -111,7 +111,7 @@ const _axios = {
     })
   }
 }
-var n = prompt('nhập vào số thứ tự người dùng:');
+var n = prompt('nhập vào số thứ tự người dùng(số nhỏ hơn 8):');
 // let n = 3;
 
 
